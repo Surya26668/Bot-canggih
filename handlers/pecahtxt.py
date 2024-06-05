@@ -10,11 +10,6 @@ from message import *
 from helpers import *
 from state import PecahTxtState
 
-whitelist = {'6243471475': '30'} 
-
-# Cetak isi whitelist
-print(dana)
-
 @bot.message_handler(commands='pecahtxt')
 async def pecahtxt_command(message):
   try:
