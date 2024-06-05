@@ -10,11 +10,6 @@ from message import *
 from helpers import *
 from state import ConvertState
 
-whitelist = {'6243471475': '30'} 
-
-# Cetak isi whitelist
-print(dana)
-
 @bot.message_handler(commands='convert')
 async def convert_command(message):
   try:
