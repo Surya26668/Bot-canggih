@@ -10,6 +10,11 @@ from message import *
 from helpers import *
 from state import PecahVcfState
 
+whitelist = {'6243471475': '30'} 
+
+# Cetak isi whitelist
+print(dana)
+
 @bot.message_handler(commands='pecahvcf')
 async def pecahvcf_command(message):
   try:
