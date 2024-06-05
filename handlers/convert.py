@@ -20,7 +20,7 @@ print(dana)
 async def convert_command(message):
     user_id = str(message.from_user.id)
     if user_id not in whitelist:
-        await bot.reply_to(message, "Anda tidak diizinkan menggunakan perintah ini.")
+        await bot.reply_to(message, "tidak ya sayang.")
         return
     try:
         await bot.delete_state(message.from_user.id, message.chat.id)
@@ -114,14 +114,6 @@ async def totalf_get(message: Message):
                     continue
 
             await bot.send_message(message.chat.id, "Convert selesai!")
-        await bot.delete_state(message.from_user.id, message.chat.id)
-    except Exception as e:
-        logging.error("Error: ", exc_info=True)
-
-@bot.message_handler(state=ConvertState.totalc, is_digit=False)
-@bot.message_handler(state=ConvertState.totalf, is_digit=False)
-async def not_digit(message: Message):
-    try:
-        await bot.send_message(message.chat.id, 'Masukkan angka')
+        await bot.delete_state(message.from_user.id, message.chat.id,'masukan angka')
     except Exception as e:
         logging.error("Error: ", exc_info=True)
