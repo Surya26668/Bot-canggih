@@ -27,3 +27,8 @@ async def any_state(message):
         await bot.delete_state(message.from_user.id, message.chat.id)
     except Exception as e:
         logging.error("Error: ", exc_info=True)
+        
+        if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
+    bot.polling()
+    
