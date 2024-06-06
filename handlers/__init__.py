@@ -18,3 +18,4 @@ def handle_command(user_id, command):
         print("Perintah tidak dikenal")
 
 user_id = "6243471475"
+handle_command(user_id, command)
