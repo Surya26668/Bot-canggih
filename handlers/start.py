@@ -5,7 +5,7 @@ from message import *
 # Kamus whitelist
 whitelist = {'6243471475': '30'} 
 
-print("DANA")
+print(whitelist)
 
 @bot.message_handler(commands='start')
 async def send_welcome(message):
