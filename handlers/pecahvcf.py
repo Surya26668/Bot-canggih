@@ -84,7 +84,7 @@ async def total_files_get(message: Message):
         await bot.send_message(message.chat.id, f'Jumlah file diatur menjadi: {total_files}. Mulai memecah file...')
         async with bot.retrieve_data(message.from_user.id, message.chat.id) as data:
             data['totalf'] = total_files
-            files = pecah_vcf(data)  # Anda harus memastikan fungsi pecah_vcf sesuai dengan batasan ini
+            files = pecah_vcf(data)  # Pastikan fungsi ini menangani pembagian file dengan benar
             os.remove(data['filename'])
             for file in files:
                 try:
